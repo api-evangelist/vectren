@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -8,144 +9,53 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Vectren (CenterPoint Energy)
 providerId: vectren
-publisherName: Vectren (CenterPoint Energy)
-serviceCategory: API
+publisherName: CenterPoint Energy, Inc.
+serviceCategory: Utility
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
-  - Electric Utility
-  - Energy
-  - Natural Gas
-  - Regulated Utility
   - Utility
+  - Energy
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Vectren (CenterPoint Energy) API surface. Provides a
-  FOCUS-aligned mapping for cost allocation, usage measurement, and unit-economics reporting across the
-  provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: 'FOCUS-aligned FinOps stub for Vectren / CenterPoint Energy: a regulated utility, not an API
+  vendor. Costs are tariff-based energy delivery, not SaaS or API consumption.'
+sources:
+  - https://www.centerpointenergy.com/
+notes: Regulated-utility billing falls outside the API FinOps scope. No public usage/billing API. Stub
+  retained for catalog completeness only.
 billingModel:
-  pricingCategory: Usage-Based
+  pricingCategory: Tariff
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
     - Usage
-    - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Vectren (CenterPoint Energy)
-  ServiceCategory: Developer Tools / API
-  ProviderName: Vectren (CenterPoint Energy)
-  PublisherName: Vectren (CenterPoint Energy)
-  InvoiceIssuerName: Vectren (CenterPoint Energy)
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  ServiceName: Vectren / CenterPoint Energy Service
+  ServiceCategory: Utility
+  ProviderName: CenterPoint Energy
+  PublisherName: CenterPoint Energy, Inc.
+  InvoiceIssuerName: CenterPoint Energy, Inc.
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: energy_consumption
+    description: Metered energy delivery (kWh / therms) per customer account; not an API meter.
+    unit: varies
     aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
-    dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: CenterPoint Energy Builder Portal
-    baseURL: ''
-    tags:
-      - Builder Services
-      - Construction
-      - Service Orders
-    serviceName: CenterPoint Energy Builder Portal
-    serviceCategory: API
-  - name: CenterPoint Energy Customer Account API
-    baseURL: ''
-    tags:
-      - Account Management
-      - Bill Pay
-      - Customer Portal
-      - Energy Usage
-    serviceName: CenterPoint Energy Customer Account API
-    serviceCategory: API
-  - name: CenterPoint Energy Data Portal
-    baseURL: ''
-    tags:
-      - Analytics
-      - Data
-      - Energy Efficiency
-      - Energy Usage
-    serviceName: CenterPoint Energy Data Portal
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+principles:
+  - name: Visibility
+    description: Customers view consumption via the CenterPoint Energy customer portal and monthly bill;
+      no developer-facing telemetry is exposed.
+  - name: Allocation
+    description: Allocation is per service address / account number, governed by the utility tariff.
+  - name: Optimization
+    description: Optimization is consumption-side (energy efficiency programs, demand response) rather
+      than rate-card optimization; the rate is regulated.
+  - name: Accountability
+    description: Accountability sits with the customer of record on the utility account; CenterPoint Energy
+      bills monthly per regulated tariff.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+    url: https://apievangelist.com
