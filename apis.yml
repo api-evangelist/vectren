@@ -68,6 +68,8 @@ apis:
       - type: Documentation
         url: https://energydataportal.centerpointenergy.com/
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/vectren-corporation
   - type: Website
     url: https://www.centerpointenergy.com/en-us/corporate/about-us/vectren-merger
   - type: Portal
