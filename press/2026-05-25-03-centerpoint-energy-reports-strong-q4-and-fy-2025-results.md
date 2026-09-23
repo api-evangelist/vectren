@@ -1,7 +1,9 @@
 ---
 title: CenterPoint Energy reports strong Q4 and FY 2025 results
 url: https://investors.centerpointenergy.com/news-releases/news-release-details/centerpoint-energy-reports-strong-q4-and-fy-2025-results-updates
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Vectren" press release artificial intelligence'
 position: 3
 source: serpapi-google

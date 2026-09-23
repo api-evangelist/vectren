@@ -1,7 +1,9 @@
 ---
 title: CenterPoint Energy and Vectren complete merger
 url: https://www.prnewswire.com/news-releases/centerpoint-energy-and-vectren-complete-merger-300788450.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Vectren" press release artificial intelligence'
 position: 2
 source: serpapi-google

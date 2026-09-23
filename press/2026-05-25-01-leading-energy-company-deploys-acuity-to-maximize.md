@@ -1,7 +1,9 @@
 ---
 title: Leading Energy Company Deploys Acuity to Maximize ...
 url: https://www.touchpointone.com/news-events/leading-energy-company-deploys-acuity-to-maximize-contact-center-performance
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Vectren" press release artificial intelligence'
 position: 1
 source: serpapi-google
