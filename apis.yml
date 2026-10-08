@@ -93,6 +93,12 @@ apis:
       - type: Documentation
         url: https://energydataportal.centerpointenergy.com/
 common:
+  - type: Plans
+    url: plans/vectren-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/vectren-rate-limits.yml
+  - type: FinOps
+    url: finops/vectren-finops.yml
   - type: DomainSecurity
     url: security/vectren-domain-security.yml
   - type: LinkedIn
